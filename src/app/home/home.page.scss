@@ -1,0 +1,50 @@
+.mainpage > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.splashimageclass {
+  justify-content: center;
+  position: absolute;
+  height: 60%;
+  background: url("/assets/imgs/splashimage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splashlogo {
+  position: absolute;
+  background-image: url("/assets/imgs/genshinlogo.png");
+  top: 60%;
+  height: 15%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.splashelements {
+  position: absolute;
+  background-image: url("/assets/imgs/elementscolored.png");
+  top: 75%;
+  height: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.splashtext {
+  position: absolute;
+  text-align: center;
+  top: 80%;
+}
+.spinnerclass {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90%;
+}
+#splashspinner {
+  color: purple;
+}
