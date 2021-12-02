@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginSignupPageRoutingModule } from './login-signup-routing.module';
+import { MainpagePageRoutingModule } from './mainpage-routing.module';
 
-import { LoginSignupPage } from './login-signup.page';
+import { MainpagePage } from './mainpage.page';
 import { TopimageComponent } from '../components/topimage/topimage.component';
 import { TipsSectionComponent } from '../components/tips-section/tips-section.component';
 @NgModule({
@@ -14,8 +14,8 @@ import { TipsSectionComponent } from '../components/tips-section/tips-section.co
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginSignupPageRoutingModule
+    MainpagePageRoutingModule
   ],
-  declarations: [LoginSignupPage,TopimageComponent,TipsSectionComponent]
+  declarations: [MainpagePage,TopimageComponent,TipsSectionComponent]
 })
-export class LoginSignupPageModule {}
+export class MainpagePageModule {}

@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { RegisterpagePageRoutingModule } from './registerpage-routing.module';
 
 import { RegisterpagePage } from './registerpage.page';
-
+import { TopimageComponent } from '../components/topimage/topimage.component';
+import { TipsSectionComponent } from '../components/tips-section/tips-section.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,6 @@ import { RegisterpagePage } from './registerpage.page';
     IonicModule,
     RegisterpagePageRoutingModule
   ],
-  declarations: [RegisterpagePage]
+  declarations: [RegisterpagePage,TopimageComponent,TipsSectionComponent]
 })
 export class RegisterpagePageModule {}
