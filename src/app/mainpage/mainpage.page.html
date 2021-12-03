@@ -1,9 +1,22 @@
-
-  
-
-
 <ion-content>
   <app-topimage></app-topimage>
+  <div class="resin">
+    <img src="assets/imgs/fragileresin.png" id="resinimage">
+  </div>
+  <div class="resincount">
+    Resin Count Here
+  </div>
 
+  <div class="welcometext">
+    <p>Welcome [USERNAME],<br>Please enter your current resin amount to determine the time for the next resin cap</p>
+  </div>
+  <div class="resininput">
+    <ion-item>
+      <!-- <ion-label position="floating" required=true>Resin Count:</ion-label> -->
+      <ion-input type="text" placeholder="Enter Your Resin Count"></ion-input>
+
+  </ion-item>
+  <ion-button id="setbtn" color="secondary" shape="round" size="small">Set</ion-button>
+  </div>
   <app-tips-section></app-tips-section>
 </ion-content>

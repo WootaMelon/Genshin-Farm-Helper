@@ -1,0 +1,34 @@
+<ion-content>
+  <app-topimage></app-topimage>
+  <div class="resin">
+    <img src="assets/imgs/fragileresin.png" id="resinimage">
+  </div>
+  <div class="resincount">
+    Resin Count Here
+  </div>
+
+  <div class="navtext">
+    <p>Please pick which type of material<br> you wish to farm</p>
+  </div>
+  <div class="resininput">
+  </div>
+  <div class="selector">
+    <ion-item>
+      <ion-avatar slot="end" button (click)="showModal()">
+        <img src="assets/characteravatars/Icon_Paimon_Menu.png">
+      </ion-avatar>
+      <ion-label>Character Talent Material</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="end" button (click)="showModal()">
+        <img src="assets/characteravatars/Icon_Paimon_Menu.png">
+      </ion-avatar>
+      <ion-label>Character Talent Material</ion-label>
+    </ion-item>
+  </div>
+  <div class="resets">
+    <p id="dailyreset">Daily Reset:</p>
+    <p id="weeklyreset">Weekly Reset: </p>
+  </div>
+  <app-tips-section></app-tips-section>
+</ion-content>

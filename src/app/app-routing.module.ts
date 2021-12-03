@@ -23,6 +23,22 @@ const routes: Routes = [
     path: 'mainpage',
     loadChildren: () => import('./mainpage/mainpage.module').then( m => m.MainpagePageModule)
   },
+  {
+    path: 'farmselectorpage',
+    loadChildren: () => import('./farmselectorpage/farmselectorpage.module').then( m => m.FarmselectorpagePageModule)
+  },
+  {
+    path: 'characterscroll',
+    loadChildren: () => import('./characterscroll/characterscroll.module').then( m => m.CharacterscrollPageModule)
+  },
+  {
+    path: 'character-talents',
+    loadChildren: () => import('./character-talents/character-talents.module').then( m => m.CharacterTalentsPageModule)
+  },
+  {
+    path: 'weapon-ascension',
+    loadChildren: () => import('./weapon-ascension/weapon-ascension.module').then( m => m.WeaponAscensionPageModule)
+  },
 ];
 
 @NgModule({

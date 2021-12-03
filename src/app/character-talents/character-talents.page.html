@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Selector" defaultHref="farmselectorpage">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Talent Material</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="images" [ngSwitch]="days">
+    
+    <img src="assets/imgs/Domain_Forsaken_Rift.png">
+    <!-- <img src="assets/imgs/Domain_Taishan_Mansion.png">
+<img src="assets/imgs/Domain_Violet_Court.png"> -->
+  </div>
+  <div><p>{{days}}</p></div>
+</ion-content>

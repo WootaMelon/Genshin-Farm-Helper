@@ -1,0 +1,48 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.resin {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+#resinimage{
+    height: 60%;
+    width: auto;
+}
+.resincount {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+.welcometext{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    padding: 10px;
+}
+.resininput{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    padding: 5%;
+    flex-direction: row;
+    
+}
+#setbtn{
+  padding-top: 2%;
+  padding-left: 5%;
+}

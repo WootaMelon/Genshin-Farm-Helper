@@ -11,7 +11,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      // this.router.navigate(['login-signup']);
+      this.router.navigate(['login-signup']);
     }, 5000);
   }
 }

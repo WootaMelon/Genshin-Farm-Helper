@@ -1,0 +1,49 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.resin {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+#resinimage {
+  height: 60%;
+  width: auto;
+}
+.resincount {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+.navtext {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+
+}
+.selector {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  
+}
+.resets {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70%;
+}

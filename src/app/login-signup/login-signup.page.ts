@@ -9,7 +9,7 @@ export class LoginSignupPage implements OnInit {
 
   constructor(private router: Router) { }
   public onlogin() {
-    // this.router.navigate(['home']);
+     this.router.navigate(['mainpage']);
   }
   public sendtoregister() {
     this.router.navigate(['registerpage']);
