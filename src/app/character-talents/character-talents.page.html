@@ -1,20 +1,290 @@
-<ion-header>
+<!-- <ion-content>
+
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button text="Selector" defaultHref="farmselectorpage">
-
       </ion-back-button>
     </ion-buttons>
-    <ion-title>Talent Material</ion-title>
+    <ion-title>{{days}}</ion-title>
   </ion-toolbar>
-</ion-header>
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Forsaken_Rift.png">
+
+            <ion-card-subtitle>Domain</ion-card-subtitle>
+            <ion-card-title>Forsaken Rift</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content> -->
+
+
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button text="Selector" defaultHref="farmselectorpage">
+    </ion-back-button>
+  </ion-buttons>
+  <ion-title>{{days}}</ion-title>
+</ion-toolbar>
 
 <ion-content>
-  <div class="images" [ngSwitch]="days">
-    
-    <img src="assets/imgs/Domain_Forsaken_Rift.png">
-    <!-- <img src="assets/imgs/Domain_Taishan_Mansion.png">
-<img src="assets/imgs/Domain_Violet_Court.png"> -->
+  <app-topimage></app-topimage>
+
+  <div class="slidesdiv">
+    <ion-slides>
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Forsaken_Rift.png">
+
+            <ion-card-subtitle>Domain</ion-card-subtitle>
+            <ion-card-title>Forsaken Rift</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
+
+              <ion-chip *ngFor="let character of mondaythursdayrift;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+
+
+            </div>
+            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
+
+              <ion-chip *ngFor="let character of tuesdayfridayrift;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+
+
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+
+              <ion-chip *ngFor="let character of wednesdaysaturdayrift;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Sunday'">
+
+              <ion-chip *ngFor="let character of allrift;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+            <div class="resin">
+              <p>Each domain run costs 20</p>
+              <img src="assets/imgs/fragileresin.png" id="resinimage">
+            </div>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Taishan_Mansion.png">
+
+            <ion-card-subtitle>Domain</ion-card-subtitle>
+            <ion-card-title>Taishan Mansion</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
+
+              <ion-chip *ngFor="let character of mondaythursdaymansion;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+
+
+            </div>
+            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
+
+              <ion-chip *ngFor="let character of tuesdayfridaymansion;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+
+              <ion-chip *ngFor="let character of wednesdaysaturdaymansion;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Sunday'">
+
+              <ion-chip *ngFor="let character of allmansion;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+            <div class="resin">
+              <p>Each domain run costs 20</p>
+              <img src="assets/imgs/fragileresin.png" id="resinimage">
+            </div>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Violet_Court.png">
+
+            <ion-card-subtitle>Domain</ion-card-subtitle>
+            <ion-card-title>Violet Court</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
+
+              <ion-chip *ngFor="let character of mondaythursdayviolet;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+
+
+            </div>
+            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
+
+              <ion-chip *ngFor="let character of tuesdayfridayviolet;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+
+              <ion-chip *ngFor="let character of wednesdaysaturdayviolet;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+
+            <div class="chipclass" *ngIf="days=='Sunday'">
+
+              <ion-chip *ngFor="let character of allviolet;">
+                <ion-avatar>
+                  <img src="assets/characteravatars/{{character.name}}.png">
+                </ion-avatar>
+                <ion-label>{{character.name}}</ion-label>
+              </ion-chip>
+            </div>
+            <div class="resin">
+              <p>Each domain run costs 20</p>
+              <img src="assets/imgs/fragileresin.png" id="resinimage">
+            </div>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
   </div>
-  <div><p>{{days}}</p></div>
+
 </ion-content>
+
+
+<!-- <ion-content>
+  <app-topimage></app-topimage>
+  <div class="forsaken">
+
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/imgs/Domain_Forsaken_Rift.png">
+
+        <ion-card-subtitle>Domain</ion-card-subtitle>
+        <ion-card-title>Forsaken Rift</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+      <ion-card-header>
+        <img src="assets/imgs/Domain_Taishan_Mansion.png">
+
+        <ion-card-subtitle>Domain</ion-card-subtitle>
+        <ion-card-title>Forsaken Rift</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+      <ion-card-header>
+        <img src="assets/imgs/Domain_Violet_Court.png">
+
+        <ion-card-subtitle>Domain</ion-card-subtitle>
+        <ion-card-title>Forsaken Rift</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+
+    </ion-card>
+    
+  </div>
+</ion-content> -->

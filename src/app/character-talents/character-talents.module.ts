@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CharacterTalentsPageRoutingModule } from './character-talents-routing.module';
 
 import { CharacterTalentsPage } from './character-talents.page';
+import { TopimageComponent } from '../components/topimage/topimage.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { CharacterTalentsPage } from './character-talents.page';
     IonicModule,
     CharacterTalentsPageRoutingModule
   ],
-  declarations: [CharacterTalentsPage]
+  declarations: [CharacterTalentsPage,TopimageComponent]
 })
 export class CharacterTalentsPageModule {}

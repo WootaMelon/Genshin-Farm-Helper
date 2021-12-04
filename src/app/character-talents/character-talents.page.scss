@@ -1,9 +1,42 @@
-.images{
-    display: flex;
-  justify-content: start;
+.slidesdiv {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.resin {
+  width: 100%;
+  height: 20%;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.images img{
-    
- 
+#resinimage {
+  height: auto;
+  width: 20%;
 }
+// .chipclass{
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+// }
+// :root {
+//   --ion-safe-area-top: 20px;
+//   --ion-safe-area-bottom: 22px;
+// }
+// .swiper-slide {
+//   display: block;
+// }
+// ion-slide > h2 {
+//   margin-top: 2.8rem;
+// }
+// ion-slide > img {
+//   max-height: 50%;
+//   max-width: 60%;
+//   margin: 36px 0;
+// }
