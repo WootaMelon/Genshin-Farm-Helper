@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { WeaponAscensionPage } from './weapon-ascension.page';
+import { WeaponascensionPage } from './weaponascension.page';
 
-describe('WeaponAscensionPage', () => {
-  let component: WeaponAscensionPage;
-  let fixture: ComponentFixture<WeaponAscensionPage>;
+describe('WeaponascensionPage', () => {
+  let component: WeaponascensionPage;
+  let fixture: ComponentFixture<WeaponascensionPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeaponAscensionPage ],
+      declarations: [ WeaponascensionPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(WeaponAscensionPage);
+    fixture = TestBed.createComponent(WeaponascensionPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

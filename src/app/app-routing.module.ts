@@ -36,8 +36,8 @@ const routes: Routes = [
     loadChildren: () => import('./character-talents/character-talents.module').then( m => m.CharacterTalentsPageModule)
   },
   {
-    path: 'weapon-ascension',
-    loadChildren: () => import('./weapon-ascension/weapon-ascension.module').then( m => m.WeaponAscensionPageModule)
+    path: 'weaponascension',
+    loadChildren: () => import('./weaponascension/weaponascension.module').then( m => m.WeaponascensionPageModule)
   },
 ];
 
