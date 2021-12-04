@@ -1,7 +1,3 @@
-
-
-
-
 <ion-toolbar>
   <ion-buttons>
     <ion-menu-button></ion-menu-button>
@@ -17,75 +13,103 @@
 
       <ion-slide>
         <ion-card>
-          <ion-card-header>
-            <img src="assets/imgs/Domain_Forsaken_Rift.png">
 
-            <ion-card-subtitle>Domain</ion-card-subtitle>
-            <ion-card-title>Forsaken Rift</ion-card-title>
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Cecilia_Garden.png">
+
+            <ion-card-subtitle>Domain of Forgery</ion-card-subtitle>
+            <ion-card-title>Cecilia Garden</ion-card-title>
           </ion-card-header>
 
           <ion-card-content>
-            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
-
-              <ion-chip *ngFor="let character of mondaythursdayrift;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-
-
+            <div class="weaponclass" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/DecarabianWeps.png">
             </div>
-            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
+            <div class="weaponclass" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/BorealWeps.png">
+            </div>
 
-              <ion-chip *ngFor="let character of tuesdayfridayrift;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-
+            <div class="weaponclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/GladiatorWeps.png">
 
             </div>
 
-            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
-
-              <ion-chip *ngFor="let character of wednesdaysaturdayrift;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-            </div>
-
-            <div class="chipclass" *ngIf="days=='Sunday'">
-
-              <ion-chip *ngFor="let character of allrift;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
+            <div class="weaponclass" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/DecarabianWeps.png">
+              <img src="assets/weaponimgs/BorealWeps.png">
+              <img src="assets/weaponimgs/GladiatorWeps.png">
             </div>
             <div class="resin">
               <p>Each domain run costs 20</p>
               <img src="assets/imgs/fragileresin.png" id="resinimage">
             </div>
+            <div class="material" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/Decarabian.png">
+            </div>
+            <div class="material" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/Boreal.png">
+            </div>
+            <div class="material" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/Gladiator.png">
+            </div>
+            <div class="material" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/Decarabian.png">
+              <img src="assets/weaponimgs/Boreal.png">
+              <img src="assets/weaponimgs/Gladiator.png">
+            </div>
           </ion-card-content>
-          <div class="books" *ngIf="days=='Monday'||days=='Thursday'">
-            <img src="assets/books/Freedom.png">
-          </div>
-          <div class="books" *ngIf="days=='Tuesday'||days=='Friday'">
-            <img src="assets/books/Resistance.png">
-          </div>
-          <div class="books" *ngIf="days=='Wednesday'||days=='Saturday'">
-            <img src="assets/books/Ballad.png">
-          </div>
-          <div class="books" *ngIf="days=='Sunday'">
-            <img src="assets/books/Resistance.png">
-            <img src="assets/books/Freedom.png">
-            <img src="assets/books/Ballad.png">
-          </div>
+
+        </ion-card>
+
+      </ion-slide>
+
+      <ion-slide>
+
+
+        <ion-card>
+          <ion-card-header>
+            <img src="assets/imgs/Domain_Hidden_Palace_of_Lianshan_Formula.png">
+
+            <ion-card-subtitle>Domain of Forgery</ion-card-subtitle>
+            <ion-card-title>Hidden Palace of Lianshin Formula</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="weaponclass" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/GuyunWeps.png">
+            </div>
+            <div class="weaponclass" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/ElixirWeps.png">
+            </div>
+
+            <div class="weaponclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/AeroWeps.png">
+
+            </div>
+
+            <div class="weaponclass" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/GuyunWeps.png">
+              <img src="assets/weaponimgs/ElixirWeps.png">
+              <img src="assets/weaponimgs/AeroWeps.png">
+            </div>
+            <div class="resin">
+              <p>Each domain run costs 20</p>
+              <img src="assets/imgs/fragileresin.png" id="resinimage">
+            </div>
+            <div class="material" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/Guyun.png">
+            </div>
+            <div class="material" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/Elixir.png">
+            </div>
+            <div class="material" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/Aero.png">
+            </div>
+            <div class="material" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/Guyun.png">
+              <img src="assets/weaponimgs/Elixir.png">
+              <img src="assets/weaponimgs/Aero.png">
+            </div>
+          </ion-card-content>
         </ion-card>
 
       </ion-slide>
@@ -94,144 +118,47 @@
         <ion-card>
 
           <ion-card-header>
-            <img src="assets/imgs/Domain_Taishan_Mansion.png">
+            <img src="assets/imgs/Domain_Court_of_Flowing_Sand.png">
 
-            <ion-card-subtitle>Domain</ion-card-subtitle>
-            <ion-card-title>Taishan Mansion</ion-card-title>
+            <ion-card-subtitle>Domain of Forgery</ion-card-subtitle>
+            <ion-card-title>Court of FLowing Sand</ion-card-title>
           </ion-card-header>
 
           <ion-card-content>
-            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
-
-              <ion-chip *ngFor="let character of mondaythursdaymansion;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-
-
+            <div class="weaponclass" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/DistantSeaWeps.png">
             </div>
-            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
-
-              <ion-chip *ngFor="let character of tuesdayfridaymansion;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
+            <div class="weaponclass" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/NarukamiWeps.png">
             </div>
 
-            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+            <div class="weaponclass" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/MaskWeps.png">
 
-              <ion-chip *ngFor="let character of wednesdaysaturdaymansion;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
             </div>
 
-            <div class="chipclass" *ngIf="days=='Sunday'">
-
-              <ion-chip *ngFor="let character of allmansion;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
+            <div class="weaponclass" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/DistantSeaWeps.png">
+              <img src="assets/weaponimgs/NarukamiWeps.png">
+              <img src="assets/weaponimgs/MaskWeps.png">
             </div>
             <div class="resin">
               <p>Each domain run costs 20</p>
               <img src="assets/imgs/fragileresin.png" id="resinimage">
             </div>
-            <div class="books" *ngIf="days=='Monday'||days=='Thursday'">
-              <img src="assets/books/Prosperity.png">
+            <div class="material" *ngIf="days=='Monday'||days=='Thursday'">
+              <img src="assets/weaponimgs/DistantSea.png">
             </div>
-            <div class="books" *ngIf="days=='Tuesday'||days=='Friday'">
-              <img src="assets/books/Diligence.png">
+            <div class="material" *ngIf="days=='Tuesday'||days=='Friday'">
+              <img src="assets/weaponimgs/Narukami.png">
             </div>
-            <div class="books" *ngIf="days=='Wednesday'||days=='Saturday'">
-              <img src="assets/books/Gold.png">
+            <div class="material" *ngIf="days=='Wednesday'||days=='Saturday'">
+              <img src="assets/weaponimgs/Mask.png">
             </div>
-            <div class="books" *ngIf="days=='Sunday'">
-              <img src="assets/books/Prosperity.png">
-              <img src="assets/books/Diligence.png">
-              <img src="assets/books/Gold.png">
-            </div>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-
-          <ion-card-header>
-            <img src="assets/imgs/Domain_Violet_Court.png">
-
-            <ion-card-subtitle>Domain</ion-card-subtitle>
-            <ion-card-title>Violet Court</ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content>
-            <div class="chipclass" *ngIf="days=='Monday'||days=='Thursday'">
-
-              <ion-chip *ngFor="let character of mondaythursdayviolet;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-
-
-            </div>
-            <div class="chipclass" *ngIf="days=='Tuesday'||days=='Friday'">
-
-              <ion-chip *ngFor="let character of tuesdayfridayviolet;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-            </div>
-
-            <div class="chipclass" *ngIf="days=='Wednesday'||days=='Saturday'">
-
-              <ion-chip *ngFor="let character of wednesdaysaturdayviolet;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-            </div>
-
-            <div class="chipclass" *ngIf="days=='Sunday'">
-
-              <ion-chip *ngFor="let character of allviolet;">
-                <ion-avatar>
-                  <img src="assets/characteravatars/{{character.name}}.png">
-                </ion-avatar>
-                <ion-label>{{character.name}}</ion-label>
-              </ion-chip>
-            </div>
-            <div class="resin">
-              <p>Each domain run costs 20</p>
-              <img src="assets/imgs/fragileresin.png" id="resinimage">
-            </div>
-            <div class="books" *ngIf="days=='Monday'||days=='Thursday'">
-              <img src="assets/books/Transience.png">
-            </div>
-            <div class="books" *ngIf="days=='Tuesday'||days=='Friday'">
-              <img src="assets/books/Elegance.png">
-            </div>
-            <div class="books" *ngIf="days=='Wednesday'||days=='Saturday'">
-              <img src="assets/books/Light.png">
-            </div>
-            <div class="books" *ngIf="days=='Sunday'">
-              <img src="assets/books/Transience.png">
-              <img src="assets/books/Elegance.png">
-              <img src="assets/books/Light.png">
+            <div class="material" *ngIf="days=='Sunday'">
+              <img src="assets/weaponimgs/DistantSea.png">
+              <img src="assets/weaponimgs/Narukami.png">
+              <img src="assets/weaponimgs/Mask.png">
             </div>
           </ion-card-content>
 
