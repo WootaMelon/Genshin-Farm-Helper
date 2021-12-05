@@ -1,9 +1,7 @@
 <ion-content>
 
 
-  <div class="starryimage">
-    <!-- <ion-img id="starfall" src="assets/imgs/starfall.jpg"></ion-img> -->
-  </div>
+<app-topimage></app-topimage>
   <div class="loginsignup">
 
     <p>Please Register<br><br>
@@ -14,7 +12,7 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating" >Password:</ion-label>
-        <ion-input ngModel type="password" name="password" placeholder="Enter Your Password" required ></ion-input>
+        <ion-input ngModel type="password" name="password"  minlength="8" placeholder="Enter Your Password" required ></ion-input>
 
       </ion-item>
       <br>
@@ -24,6 +22,5 @@
   <div class="register">Already have an Account? <br><br>
     <a (click)="sendtologin()" id="signupref">Login here</a>
   </div>
-
   <app-tips-section></app-tips-section>
 </ion-content>

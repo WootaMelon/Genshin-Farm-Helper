@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 
 
 export interface Login {
-  id: string,
   username: string,
   password: string
 }
@@ -15,11 +14,11 @@ export interface Login {
 
 export class LoginService {
 
-  private url = "http://localhost/phptest/"
+  private base_url = "http://localhost/phptest/"
 
   constructor(private http: HttpClient) { }
 
-  login() {
-    return this.http.get<[Login]>(this.url+"login.php");
+  login(login: Login) {
+    return this.http.post(this.base_url + "login.php", login);
   }
 }

@@ -1,28 +1,30 @@
 <ion-content>
 
 
-   <app-topimage></app-topimage>
-   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <div class="loginsignup">
-        <p>Please Login <br>to Continue</p>
-        <ion-item>
-            <ion-label position="floating" required=true>Username:</ion-label>
-            <ion-input type="text" name="username" placeholder="Enter Your Username"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="floating" required=true>Password:</ion-label>
-            <ion-input type="password" name="password" placeholder="Enter Your Password"></ion-input>
+  <app-topimage></app-topimage>
+  <div class="loginsignup">
 
-        </ion-item>
-        <br>
-        <ion-button type="submit" color="medium" shape="round" size="small" (click)="onlogin()">Login</ion-button>
+    <p>Please Login<br><br>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <ion-item>
+        <ion-label position="floating">Username:</ion-label>
+        <ion-input ngModel type="text" name="username" placeholder="Enter Your Username" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password:</ion-label>
+        <ion-input ngModel type="password" name="password" minlength="8" placeholder="Enter Your Password" required>
+        </ion-input>
 
-    </div>
-    <div class="register">Don't have an Account? <br><br>
-        <a (click)="sendtoregister()" id="signupref">Sign up here</a>
-
-    </div>
+      </ion-item>
+      <br>
+      <ion-button type="submit" color="medium" shape="round" size="small">Login</ion-button>
     </form>
-   <app-tips-section></app-tips-section>
-  
+  </div>
+  <div class="register">Don't have an Account? <br><br>
+    <a (click)="sendtoregister()" id="signupref">Sign up here</a>
+
+  </div>
+
+  <app-tips-section></app-tips-section>
+
 </ion-content>

@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class FarmselectorpagePage implements OnInit {
 
-  constructor(public modalCtrl: ModalController) {
+  constructor(public modalCtrl: ModalController, private router: Router) {
     
    }
 // public CharacterSelector(){
@@ -22,6 +22,9 @@ async showModal() {
   return await modal.present();  
 }  
 
+redirectToWeaponAscension(){
+  this.router.navigate(['weaponascension']);
+}
   ngOnInit() {
 
   }
