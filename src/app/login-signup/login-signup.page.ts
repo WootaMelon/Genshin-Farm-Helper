@@ -4,6 +4,8 @@ import { NgForm } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { LoginService } from '../services/api/login.service';
 import { Login } from '../services/api/login.service';
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'app-login-signup',
   templateUrl: './login-signup.page.html',
@@ -11,7 +13,9 @@ import { Login } from '../services/api/login.service';
 })
 export class LoginSignupPage implements OnInit {
 
-  constructor(private router: Router, private service: LoginService, public alertController: AlertController) { }
+  constructor(private router: Router, private service: LoginService, public alertController: AlertController, private storage: Storage) {
+
+  }
   // public onlogin() {
   //    this.router.navigate(['mainpage']);
   // }
@@ -44,6 +48,9 @@ export class LoginSignupPage implements OnInit {
       this.service.login(formvalue).subscribe(response => {
         console.log(response);
         if (response == 'true') {
+          console.log(formvalue.username);
+          this.storage.set('name', formvalue.username);
+         
           this.router.navigate(['mainpage']);
         }
         else {

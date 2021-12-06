@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private storage: Storage) { }
 
   redirectToFarmSelector() {
     this.router.navigate(['farmselectorpage']);
@@ -25,6 +26,9 @@ export class AppComponent {
 
   }
 
+  async ngOnInit() {
 
+    await this.storage.create();
+  }
 
 }
