@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { User } from '../services/api/signup.service';
 import { SignupService } from '../services/api/signup.service';
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'app-registerpage',
   templateUrl: './registerpage.page.html',
@@ -48,7 +50,7 @@ export class RegisterpagePage implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  constructor(private router: Router, private service: SignupService, public alertController: AlertController) { }
+  constructor(private router: Router, private service: SignupService, public alertController: AlertController, private storage: Storage) { }
 
   public sendtologin() {
     this.router.navigate(['login-signup']);
@@ -62,6 +64,7 @@ export class RegisterpagePage implements OnInit {
       this.service.Signup(formvalue).subscribe(response => {
         console.log(response);
         if (response == 'true') {
+          this.storage.set('name', formvalue.username);
           this.router.navigate(['mainpage']);
         }
         else {

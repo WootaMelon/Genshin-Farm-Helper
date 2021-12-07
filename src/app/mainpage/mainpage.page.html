@@ -11,12 +11,19 @@
     <p>Welcome {{username}},<br>Please enter your current resin amount to determine the time for the next resin cap</p>
   </div>
   <div class="resininput">
-    <ion-item>
-      <!-- <ion-label position="floating" required=true>Resin Count:</ion-label> -->
-      <ion-input type="text" placeholder="Enter Your Resin Count"></ion-input>
 
-    </ion-item>
-    <ion-button id="setbtn" color="secondary" shape="round" size="small">Set</ion-button>
+    <!-- <ion-label position="floating" required=true>Resin Count:</ion-label> -->
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <ion-item>
+        <ion-input ngModel type="text" name="loggedusername" value={{username}} hidden></ion-input>
+
+        <ion-input ngModel type="text" name="resincount" placeholder="Enter Your Resin Count"></ion-input>
+      </ion-item>
+
+
+      <ion-button type="submit" id="setbtn" color="secondary" shape="round" size="small">Set</ion-button>
+
+    </form>
   </div>
   <app-tips-section></app-tips-section>
 </ion-content>
