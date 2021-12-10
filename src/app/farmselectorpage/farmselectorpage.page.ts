@@ -13,11 +13,21 @@ export class FarmselectorpagePage implements OnInit {
 
   resincount: string
 
-  weeklyReset: string
+  timeToCap: number
+  weeklyReset: any
+  weeklyTask: any
+  dailyReset: any
+  dailyTask: any
+
   constructor(public modalCtrl: ModalController, private router: Router, private storage: Storage) {
 
   }
 
+  calculateCap() {
+    let x = 160 - parseInt(this.resincount);
+    this.timeToCap = Math.round(((x * 8) / 60));
+
+  }
 
   // public CharacterSelector(){
   //   this.router.navigate(['characterscroll']);
@@ -36,10 +46,11 @@ export class FarmselectorpagePage implements OnInit {
     setTimeout(() => {
       this.storage.get('resin').then((val) => {
         this.resincount = val;
-
+        this.calculateCap();
       });
     }, 100);
-
+    this.WeeklyCountDown();
+    this.DailyCountDown();
   }
 
   WeeklyCountDown() {
@@ -51,8 +62,12 @@ export class FarmselectorpagePage implements OnInit {
       diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
     let countDownDate = d.setDate(diff + 7);
     // Update the count down every 1 second
-    let x = setInterval(function () {
 
+
+
+
+
+    this.weeklyTask = setInterval(() => {
       // Get todays date and time
       let now = new Date().getTime();
       // Find the distance between now and the count down date
@@ -64,10 +79,34 @@ export class FarmselectorpagePage implements OnInit {
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-      // Output the result in an element with id="demo"
-      this.weeklyReset = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+      this.weeklyReset = days + 'd ' + hours + 'h '
+        + minutes + 'm ' + seconds + 's ';
     }, 1000);
+
   }
 
+  DailyCountDown() {
+    let d = new Date();
+    d.setHours(5);
+    d.setMinutes(0);
+    d.setSeconds(0);
+
+    let countDownDate = d.setDate(d.getDate() + 1);
+
+    this.dailyTask = setInterval(() => {
+      // Get todays date and time
+      let now = new Date().getTime();
+      // Find the distance between now and the count down date
+      let distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+      this.dailyReset = days + 'd ' + hours + 'h '
+        + minutes + 'm ' + seconds + 's ';
+    }, 1000);
+  }
 }

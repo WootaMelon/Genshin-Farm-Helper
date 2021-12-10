@@ -4,7 +4,8 @@
     <img src="assets/imgs/fragileresin.png" id="resinimage">
   </div>
   <div class="resincount">
-    {{resincount}}
+    {{resincount}} <br>
+    <p>Time for next cap is Approximately<br> {{timeToCap}} hours</p>
   </div>
 
   <div class="navtext">
@@ -27,7 +28,7 @@
     </ion-item>
   </div>
   <div class="resets">
-    <p id="dailyreset">Daily Reset:</p>
+    <p id="dailyreset">Daily Reset: {{dailyReset}}</p>
     <p id="weeklyreset">Weekly Reset: {{weeklyReset}}</p>
   </div>
   <app-tips-section></app-tips-section>
