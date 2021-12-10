@@ -1,15 +1,8 @@
 .starryimage {
-    width: 100%;
-    height: 20%;
-    background: url("/assets/imgs/starfall.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-  }
+  width: 100%;
+  height: 20%;
+  background: url("/assets/imgs/starfall.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
