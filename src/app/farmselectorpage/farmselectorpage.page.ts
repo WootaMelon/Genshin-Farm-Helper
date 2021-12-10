@@ -59,13 +59,8 @@ export class FarmselectorpagePage implements OnInit {
     d.setMinutes(0);
     d.setSeconds(0);
     var day = d.getDay(),
-      diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+      diff = d.getDate() - day + (day == 0 ? -6 : 1);
     let countDownDate = d.setDate(diff + 7);
-    // Update the count down every 1 second
-
-
-
-
 
     this.weeklyTask = setInterval(() => {
       // Get todays date and time
@@ -77,7 +72,6 @@ export class FarmselectorpagePage implements OnInit {
       let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
 
       this.weeklyReset = days + 'd ' + hours + 'h '
         + minutes + 'm ' + seconds + 's ';
@@ -98,14 +92,13 @@ export class FarmselectorpagePage implements OnInit {
       let now = new Date().getTime();
       // Find the distance between now and the count down date
       let distance = countDownDate - now;
-      // Time calculations for days, hours, minutes and seconds
-      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      // Time calculations for hours, minutes and seconds
       let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-      this.dailyReset = days + 'd ' + hours + 'h '
+      this.dailyReset = hours + 'h '
         + minutes + 'm ' + seconds + 's ';
     }, 1000);
   }
