@@ -18,7 +18,7 @@ export class TipsSectionComponent implements OnInit {
 
     this.service.getTips().subscribe(response => {
       this.tips = response;
-      this.tiptext = this.tips[Math.floor(Math.random() * (6 + 1))].tip_text;
+      this.tiptext = this.tips[Math.floor(Math.random() * (3 + 1))].tip_text;
       console.log(this.tiptext);
     });
   }
